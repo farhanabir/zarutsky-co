@@ -1,0 +1,358 @@
+backend:
+  name: "git-gateway"
+  accept_roles:
+    - "admin"
+    - "editor"
+media_folder: "static/images"
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "site/pages"
+    identifier_field: "title"
+    extension: "md"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Layout"
+        widget: "hidden"
+        name: "layout"
+        default: "{{slug}}.html"
+      - label: "Seo"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            required: false
+          - label: "Open Graph Image"
+            name: "og:image"
+            widget: "image"
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: "Twitter Card"
+            name: "twitter:card"
+            widget: "string"
+            default: "summary"
+            required: false
+          - label: "Twitter Site"
+            name: "twitter:site"
+            widget: "string"
+            required: false
+          - label: "Twitter Creator"
+            name: "twitter:creator"
+            widget: "string"
+            required: false
+          - label: "Additional HTML tags"
+            name: "additional_tags"
+            widget: "text"
+            required: false
+  - name: "projects"
+    label: "Projects"
+    folder: "site/projects"
+    create: true
+    identifier_field: "name"
+    extension: "md"
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Tags"
+        widget: "hidden"
+        name: "tags"
+        default: "projects"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Layout"
+        widget: "hidden"
+        name: "layout"
+        default: "single-projects.html"
+      - label: "Seo"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            required: false
+          - label: "Open Graph Image"
+            name: "og:image"
+            widget: "image"
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: "Twitter Card"
+            name: "twitter:card"
+            widget: "string"
+            default: "summary"
+            required: false
+          - label: "Twitter Site"
+            name: "twitter:site"
+            widget: "string"
+            required: false
+          - label: "Twitter Creator"
+            name: "twitter:creator"
+            widget: "string"
+            required: false
+          - label: "Additional HTML tags"
+            name: "additional_tags"
+            widget: "text"
+            required: false
+      - name: "year"
+        label: "Year"
+        widget: "string"
+        required: true
+      - name: "description"
+        label: "Description"
+        widget: "string"
+        required: true
+      - name: "link"
+        label: "Link (URL)"
+        widget: "string"
+        required: false
+      - widget: "object"
+        name: "cover-project"
+        label: "Cover Project"
+        fields:
+          - widget: "image"
+            name: "url"
+            label: "Image"
+            allow_multiple: false
+            required: true
+          - widget: "string"
+            name: "alt"
+            label: "Alt Text"
+            required: true
+      - name: "problem-solution"
+        label: "Problem Solution"
+        widget: "text"
+        required: true
+      - name: "project-color"
+        label: "Project-Color"
+        widget: "color"
+        required: true
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - name: "name"
+        label: "Project Name"
+        widget: "string"
+        required: true
+      - name: "created-on"
+        label: "Created On"
+        widget: "datetime"
+        required: false
+      - name: "updated-on"
+        label: "Updated On"
+        widget: "datetime"
+        required: false
+      - name: "published-on"
+        label: "Published On"
+        widget: "datetime"
+        required: false
+  - name: "blog"
+    label: "Blogs"
+    folder: "site/blog"
+    create: true
+    identifier_field: "name"
+    extension: "md"
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Tags"
+        widget: "hidden"
+        name: "tags"
+        default: "blog"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Layout"
+        widget: "hidden"
+        name: "layout"
+        default: "single-blog.html"
+      - label: "Seo"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            required: false
+          - label: "Open Graph Image"
+            name: "og:image"
+            widget: "image"
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: "Twitter Card"
+            name: "twitter:card"
+            widget: "string"
+            default: "summary"
+            required: false
+          - label: "Twitter Site"
+            name: "twitter:site"
+            widget: "string"
+            required: false
+          - label: "Twitter Creator"
+            name: "twitter:creator"
+            widget: "string"
+            required: false
+          - label: "Additional HTML tags"
+            name: "additional_tags"
+            widget: "text"
+            required: false
+      - name: "desription"
+        label: "Desription"
+        widget: "string"
+        required: true
+      - widget: "object"
+        name: "caver-blog"
+        label: "Caver-Blog"
+        fields:
+          - widget: "image"
+            name: "url"
+            label: "Image"
+            allow_multiple: false
+            required: true
+          - widget: "string"
+            name: "alt"
+            label: "Alt Text"
+            required: true
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - name: "name"
+        label: "Name Blog"
+        widget: "string"
+        required: true
+      - name: "created-on"
+        label: "Created On"
+        widget: "datetime"
+        required: false
+      - name: "updated-on"
+        label: "Updated On"
+        widget: "datetime"
+        required: false
+      - name: "published-on"
+        label: "Published On"
+        widget: "datetime"
+        required: false
+  - name: "vacancy"
+    label: "Vacancies"
+    folder: "site/vacancy"
+    create: true
+    identifier_field: "name"
+    extension: "md"
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Tags"
+        widget: "hidden"
+        name: "tags"
+        default: "vacancy"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Layout"
+        widget: "hidden"
+        name: "layout"
+        default: "single-vacancy.html"
+      - label: "Seo"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            required: false
+          - label: "Open Graph Image"
+            name: "og:image"
+            widget: "image"
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: "Twitter Card"
+            name: "twitter:card"
+            widget: "string"
+            default: "summary"
+            required: false
+          - label: "Twitter Site"
+            name: "twitter:site"
+            widget: "string"
+            required: false
+          - label: "Twitter Creator"
+            name: "twitter:creator"
+            widget: "string"
+            required: false
+          - label: "Additional HTML tags"
+            name: "additional_tags"
+            widget: "text"
+            required: false
+      - widget: "object"
+        name: "resume"
+        label: "Resume"
+        fields:
+          - widget: "file"
+            name: "url"
+            label: "File"
+            allow_multiple: false
+            required: false
+      - name: "e-mail"
+        label: "E-mail (Email)"
+        widget: "string"
+        required: false
+      - name: "name"
+        label: "Name"
+        widget: "string"
+        required: true
+      - name: "created-on"
+        label: "Created On"
+        widget: "datetime"
+        required: false
+      - name: "updated-on"
+        label: "Updated On"
+        widget: "datetime"
+        required: false
+      - name: "published-on"
+        label: "Published On"
+        widget: "datetime"
+        required: false

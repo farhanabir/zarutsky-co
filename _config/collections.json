@@ -1,0 +1,19 @@
+{
+  "-42ac8c3d": {
+    "collection": "projects"
+  },
+  "3b9385c9": {
+    "collection": "blog",
+    "query": {
+      "offset": 0,
+      "limit": 2
+    }
+  },
+  "-5ffe1c8f": {
+    "collection": "blog",
+    "paginationLimit": 10
+  },
+  "-28fb0018": {
+    "collection": "vacancy"
+  }
+}

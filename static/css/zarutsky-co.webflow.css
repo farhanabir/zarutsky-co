@@ -800,6 +800,7 @@ p {
   background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
   background-position: 50% 50%;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 .rich-text-block {
@@ -1277,6 +1278,11 @@ p {
     font-size: 40px;
   }
 
+  .blog-page__image {
+    height: 300px;
+    background-size: cover;
+  }
+
   .navbar {
     position: fixed;
     left: 20px;
@@ -1490,6 +1496,10 @@ p {
     margin-right: 0%;
   }
 
+  .blog-page__image {
+    height: 250px;
+  }
+
   .heading {
     font-size: 40px;
   }
@@ -1631,7 +1641,7 @@ p {
   }
 
   .blog-page__image {
-    height: 250px;
+    height: 150px;
   }
 
   .heading {

@@ -1,40 +1,40 @@
 {
-  "-7e66776c": {
+  "44742046": {
     "collection": "projects",
     "query": {
-      "fields": [
-        {
-          "fieldPath": "published-on",
-          "operatorName": "exists",
-          "value": "yes"
-        }
-      ],
+      "limit": 8,
       "offset": 0,
-      "limit": 8
-    }
-  },
-  "3b9385c9": {
-    "collection": "blog",
-    "query": {
-      "offset": 0,
-      "limit": 2
-    }
-  },
-  "353a539c": {
-    "collection": "projects",
-    "query": {
-      "fields": [
-        {
-          "fieldPath": "published-on",
-          "operatorName": "exists",
-          "value": "yes"
-        }
+      "sort": [
+        "-published-on"
       ]
     }
   },
-  "-5ffe1c8f": {
+  "-40a29802": {
     "collection": "blog",
-    "paginationLimit": 10
+    "query": {
+      "offset": 0,
+      "limit": 2,
+      "sort": [
+        "-published-on"
+      ]
+    }
+  },
+  "159270a2": {
+    "collection": "projects",
+    "query": {
+      "sort": [
+        "-published-on"
+      ]
+    }
+  },
+  "-1714a9c0": {
+    "collection": "blog",
+    "paginationLimit": 10,
+    "query": {
+      "sort": [
+        "-published-on"
+      ]
+    }
   },
   "-28fb0018": {
     "collection": "vacancy"

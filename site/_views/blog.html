@@ -26,7 +26,7 @@
       <div class="blog-wrapper _2">
         <h1 class="h1-blog-news _2">Все самое интересное про дизайн</h1>
         <div class="blog-wrapper__list">
-          {%- assign collectionId = "main" -%}{%- assign collection = collections["-5ffe1c8f"][collectionId] | limit: 10 -%}<div class="w-dyn-list">
+          {%- assign collectionId = "main" -%}{%- assign collection = collections["-1714a9c0"][collectionId] | limit: 10 -%}<div class="w-dyn-list">
             {%- if collection.length > 0 -%}<div role="list" class="collection-list blog w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="collection-item w-dyn-item">
                 <div class="blog-list__block _2">
@@ -39,7 +39,7 @@
             {%- unless collection.length > 0 -%}<div class="w-dyn-empty">
               <div>No items found.</div>
             </div>{%- endunless -%}
-            {%- assign paginationId = "-5ffe1c8f-" | append: collectionId -%}{% assign paginationExists = false %}{% assign paginationUrl =  "/pagination/" | append: paginationId | append: "/page-1.json" %}{% for item in collections.all %}{% if item.url == paginationUrl %}{% assign paginationExists = true %}{% endif; %}{% endfor %}<div class="w-pagination-wrapper pagination" pagination="{{ paginationId }}">
+            {%- assign paginationId = "-1714a9c0-" | append: collectionId -%}{% assign paginationExists = false %}{% assign paginationUrl =  "/pagination/" | append: paginationId | append: "/page-1.json" %}{% for item in collections.all %}{% if item.url == paginationUrl %}{% assign paginationExists = true %}{% endif; %}{% endfor %}<div class="w-pagination-wrapper pagination" pagination="{{ paginationId }}">
               <a href="#" class="w-pagination-previous previous" style="display: none;"><svg class="w-pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)">
                   <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
                 </svg>

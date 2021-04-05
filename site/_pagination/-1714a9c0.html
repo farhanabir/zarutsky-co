@@ -1,0 +1,27 @@
+---js
+{
+  pagination: {
+  data: "collections.-1714a9c0_paged",
+  size: 1,
+  alias: "c",
+  },
+  permalink: "{{ c.permalink }}"
+}  
+---
+{%- capture items -%}
+{%- for item in c.items -%}
+<div role="listitem" class="collection-item w-dyn-item">
+                <div class="blog-list__block _2">
+                  <a href="{{ item.url }}" class="blog-list__link w-inline-block"><img src="{{ item.data['caver-blog'].url | escape }}" loading="lazy" alt="{{ item.data['caver-blog'].alt | escape }}" class="blog-image">
+                    <p class="paragraph-blog">{{ item.data.desription }}</p>
+                  </a>
+                </div>
+              </div>
+{%- endfor -%}
+{%- endcapture -%}
+{
+  "items": {{ items | json }},
+   "length": "{{ c.items.length }}",
+   "next": "{{c.next }}",
+   "prev": "{{c.prev}}"
+}

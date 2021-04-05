@@ -6,8 +6,8 @@ staticDir: "static"
 uploadDir: "images"
 pagesDir: "site"
 metadata:
-  title: "zarutsky co"
-  description: "Theme created in Webflow and converted with Udesly"
+  title: "zarutsky&co"
+  description: "Разработка сайтов на высшем уровне. Стильные сайты с проработанной структурой, правильным позиционированием продукта, крутой графикой и креативной концепцией."
 models:
   projects:
     type: "page"

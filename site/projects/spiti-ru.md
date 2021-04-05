@@ -7,7 +7,7 @@ seo:
 year: "2020"
 description: Редизайн сайта посуточной аренды квартир
 cover-project:
-  url: /static/images/spiti_cover.jpg
+  url: /static/images/spiti_cover_f.jpg
   alt: Spiti.ru Cover
 problem-solution: >-
   Задача стояла очень простая, нужно было осовременить дизайн и сохранить общую

@@ -1,12 +1,35 @@
 {
-  "-42ac8c3d": {
-    "collection": "projects"
+  "-7e66776c": {
+    "collection": "projects",
+    "query": {
+      "fields": [
+        {
+          "fieldPath": "published-on",
+          "operatorName": "exists",
+          "value": "yes"
+        }
+      ],
+      "offset": 0,
+      "limit": 8
+    }
   },
   "3b9385c9": {
     "collection": "blog",
     "query": {
       "offset": 0,
       "limit": 2
+    }
+  },
+  "353a539c": {
+    "collection": "projects",
+    "query": {
+      "fields": [
+        {
+          "fieldPath": "published-on",
+          "operatorName": "exists",
+          "value": "yes"
+        }
+      ]
     }
   },
   "-5ffe1c8f": {

@@ -108,7 +108,7 @@
         <h5>Кейсы</h5>
         <div class="h-line"></div>
         <div class="case-wrapper__list">
-          {%- assign collectionId = "main" -%}{%- assign collection = collections["-42ac8c3d"][collectionId] -%}<div class="w-dyn-list">
+          {%- assign collectionId = "main" -%}{%- assign collection = collections["-7e66776c"][collectionId] | limit: 8 -%}<div class="w-dyn-list">
             {%- if collection.length > 0 -%}<div role="list" class="w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="w-dyn-item">
                 <div class="case-wrapper__list__block">
